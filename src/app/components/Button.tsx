@@ -7,6 +7,9 @@ interface ButtonProps {
   href?: string;
   onClick?: () => void;
   className?: string;
+  target?: string;
+  rel?: string;
+  ariaLabel?: string;
 }
 
 export function Button({
@@ -15,6 +18,9 @@ export function Button({
   href,
   onClick,
   className = "",
+  target,
+  rel,
+  ariaLabel,
 }: ButtonProps) {
   const baseStyles =
     "px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-medium transition-all duration-300 inline-flex items-center justify-center gap-2 text-sm sm:text-base";
@@ -34,6 +40,9 @@ export function Button({
     <Component
       href={href}
       onClick={onClick}
+      target={target}
+      rel={rel}
+      aria-label={ariaLabel}
       className={`${baseStyles} ${variants[variant]} ${className}`}
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.98 }}

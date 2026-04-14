@@ -14,7 +14,7 @@ export function SectionContainer({
   return (
     <section
       id={id}
-      className={`relative py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-12 ${className}`}
+      className={`relative scroll-mt-24 sm:scroll-mt-28 md:scroll-mt-32 py-16 sm:py-20 md:py-32 px-4 sm:px-6 md:px-12 ${className}`}
     >
       <div className="max-w-7xl mx-auto">{children}</div>
     </section>
